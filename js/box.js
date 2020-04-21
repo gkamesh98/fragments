@@ -67,8 +67,8 @@ function generate(){
 			for(var c=0;c<parseInt(width,10);c++)  
 			{
 				myTable.rows[r].cells[c].innerHTML="";
-				document.getElementById('score').rows[0].cells[0].innerHTML = "0";
-				document.getElementById('score').rows[0].cells[2].innerHTML = "0";
+				document.getElementById('score').rows[0].cells[0].innerHTML = "score";
+				document.getElementById('score').rows[0].cells[2].innerHTML = "steps";
 			}
 		}
 	}

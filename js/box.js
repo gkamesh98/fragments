@@ -19,7 +19,7 @@ function changecolor(){
 function generate(){
 	var height = 5;
 	var width = 5;
-	myTable = document.getElementById('myTable');
+	var myTable = document.getElementById('myTable');
 	var el = myTable.rows.length;
 	if(document.getElementById('score').rows.length == 0){
 		var x=document.getElementById('score').insertRow(0);
@@ -67,8 +67,8 @@ function generate(){
 			for(var c=0;c<parseInt(width,10);c++)  
 			{
 				myTable.rows[r].cells[c].innerHTML="";
-				document.getElementById('score').rows[0].cells[1].innerHTML = "0";
-				document.getElementById('score').rows[1].cells[1].innerHTML = "0";
+				document.getElementById('score').rows[0].cells[0].innerHTML = "0";
+				document.getElementById('score').rows[0].cells[2].innerHTML = "0";
 			}
 		}
 	}
@@ -206,8 +206,10 @@ function check(p,q,height,width){
 			myTable.deleteRow(0);
 		}
 		document.getElementById('score').rows[0].deleteCell(1);
-		document.querySelector(".share").style.display = "block";
+		//document.querySelector(".share").style.display = "block";
 		
 	}
-	changecolor();
+	else{
+		changecolor();
+	}
 }

@@ -17,6 +17,8 @@ function changecolor(){
 }
 
 function generate(){
+	document.querySelector(".share").style.display = "none";
+	document.querySelector(".how").style.display = "none";
 	var height = 5;
 	var width = 5;
 	var myTable = document.getElementById('myTable');
@@ -206,10 +208,22 @@ function check(p,q,height,width){
 			myTable.deleteRow(0);
 		}
 		document.getElementById('score').rows[0].deleteCell(1);
-		//document.querySelector(".share").style.display = "block";
-		
+		document.querySelector("#ok").style.backgroundColor = "";
+		document.querySelector(".share").style.display = "block";
+		var val1 = document.getElementById("score").rows[0].cells[0].innerHTML;
+		var val2 = document.getElementById("score").rows[0].cells[1].innerHTML;
+		document.getElementById("sharetext").href="whatsapp://send?text=I am challenging you to cross the score of "+val1.toString()+" in "+val2.toString()+" steps. https://gkamesh98.github.io/fragmention/";
 	}
 	else{
 		changecolor();
 	}
+}
+function how(){
+	document.querySelector(".origin").style.display="none";
+	document.querySelector(".howto").style.display="block";
+	return false;
+}
+function clos(){
+	document.querySelector(".origin").style.display="block";
+	document.querySelector(".howto").style.display="none";
 }

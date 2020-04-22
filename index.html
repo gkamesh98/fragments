@@ -19,15 +19,40 @@
 			<div class="bg3"></div>
 			<div class = "main">
 				<div class = "center">
-					<form id="gen" name="gen" method=POST onsubmit="return(generate())"> 
-						<input id="begin" type="image" src = "img\play.svg" height='32px' width='32px' alt = "Begin"/>
-					</form>
+					<div class="origin">
+						<form id="gen" name="gen" method=POST onsubmit="return(generate())"> 
+							<input id="begin" type="image" src = "img\play.svg" height='32px' width='32px' alt = "Begin"/>
+						</form>
+						<div class="how">
+							<form id="gen" name="gen" method=POST onsubmit="return(how())"> 
+								<input id="begin" type="submit" value = "How to play"/>
+							</form>
+						</div>
+					</div>
+					<div class="howto">
+						<div class="closeabout" onClick="clos()">
+							<div class="close1"></div>
+							<div class="close2"></div>
+						</div>
+						<h3>Rules</h3>
+						<ol>
+							<li>When you click on the block having the number will be divided into two block of numbers each of them are half of the number number you clicked.</li>
+							<li>If there is there is no two block spaces adjacent to the block you clicked it will will not split.</li>
+							<li>If you use <img src="img\bin.svg" alt="delete" height='15px' width='15px'> then the block that you click will be deleted.</li>
+							<li>Score will increase inverse to value of the block that is been clicked.</li>
+							<li>If you use <img src="img\bin.svg" alt="delete" height='15px' width='15px'> then score will not increase.</li>
+						</ol>
+					</div>
 					<table id = "score" class = "table-responive">
 					</table>
 					<div id = "ok">
 						<table id = "myTable" class = "table-responive" >
 						</table>
 					</div>
+					<div class = "share">
+						<a id="sharetext" href="whatsapp://send?text=I am challenging you to cross my score!" data-action="share/whatsapp/share">Share it your friends in <img style = "background:green; padding:5px; border-radius:10px" src="img\whatsapp.svg" alt=\"share on whatsapp\" height='32px' width='32px'> and challenge them to cross your score.</a>
+					<div>
+					
 				</div>
 			</div>
 		</div>

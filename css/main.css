@@ -6,7 +6,53 @@
    -ms-user-select: none; 
    user-select: none;
 }
-
+.howto{
+	width:75%;
+	height:75%;
+	color:white;
+	background-color:brown;
+	border-radius:20px;
+	border:10px solid;
+	align-self:center;
+	text-align:center;
+	margin:auto;
+	margin-top:50px;
+	opacity:0.9;
+	border-color:black;
+	display: none;
+}
+.closeabout{
+	float:right;
+	cursor:pointer;
+	}
+.closeabout:active .close1, .closeabout:active .close2{
+	background-color:#fff;
+}
+.close1, .close2{
+	width:35px;
+	height:5px;
+	background-color:#333;
+	margin:16px;
+	transition:0.4s;
+	cursor:pointer;
+}
+.close1{
+	-webkit-transform:rotate(-45deg) translate(-9px,6px);
+		transform:rotate(-45deg) translate(-9px,6px);
+}
+.close2{
+	-webkit-transform:rotate(45deg) translate(-8px,-8px);
+		transform:rotate(45deg) translate(-8px,-8px);
+}
+ol{
+    text-align:left;
+}
+.origin{
+	display:block;
+}
+.how{
+	display: block;
+}
 .box{
 	animation: appear 0.5s;
 }
@@ -22,17 +68,16 @@
 }
 
 .share {
-	background:green;
+	#background:green;
 	color: white;
 	cursor:pointer;
-	padding: 5px;
+	#padding: 5px;
 	border-radius : 10px;
-	margin-left:25px;
-	margin-right:25px;
+	#margin-left:25px;
+	#margin-right:25px;
 	display: none;
-	position:absolute;
+	#position:absolute;
  }
-
 body{
 	
 	position:absolute;
@@ -118,6 +163,7 @@ body{
 	height:calc(100% - 55px);
 	width:100%;
 }
+
 .center{
 	width:fit-content;
 	text-align:center;
@@ -189,15 +235,15 @@ form input{
 	padding-left:10px;
 	outline:none;
 }
-form input[type="image"]{
+form input{
 	border:none;
 	border-radius:30px;
 	padding:10px;
 	background-color:blue;
-	color:white;
+	color:black;
 	margin-bottom:0px;
 	cursor:pointer;
 }
-form input[type="image"]:active{
+form input:active{
 	background-color:red;
 }

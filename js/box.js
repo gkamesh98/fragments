@@ -109,7 +109,8 @@ function check(p,q,height,width){
 	else{
 		var s = new Array(4);
 		var count = -1;
-		
+		de = 1;
+		document.getElementById('dele').style.backgroundColor='red';
 		if(myTable.rows[p].cells[q].innerHTML != ""){
 		
 			if(p-1>=0){
@@ -209,10 +210,14 @@ function check(p,q,height,width){
 		}
 		document.getElementById('score').rows[0].deleteCell(1);
 		document.querySelector("#ok").style.backgroundColor = "";
-		document.querySelector(".share").style.display = "block";
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if(isMobile){
+			document.querySelector(".share").style.display = "block";
+			document.getElementById("sharetext").href="whatsapp://send?text=I am challenging you to cross the score of "+val1.toString()+" in "+val2.toString()+" steps. https://gkamesh98.github.io/fragmention/";
+		}
 		var val1 = document.getElementById("score").rows[0].cells[0].innerHTML;
 		var val2 = document.getElementById("score").rows[0].cells[1].innerHTML;
-		document.getElementById("sharetext").href="whatsapp://send?text=I am challenging you to cross the score of "+val1.toString()+" in "+val2.toString()+" steps. https://gkamesh98.github.io/fragmention/";
+		
 	}
 	else{
 		changecolor();

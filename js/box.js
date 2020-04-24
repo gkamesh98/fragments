@@ -213,7 +213,7 @@ function check(p,q,height,width){
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if(isMobile){
 			document.querySelector(".share").style.display = "block";
-			document.getElementById("sharetext").href="whatsapp://send?text=I am challenging you to cross the score of "+val1.toString()+" in "+val2.toString()+" steps. https://gkamesh98.github.io/fragmention/";
+			document.getElementById("sharetext").href="whatsapp://send?text=I am challenging you to cross the score of "+val1.toString()+" in "+val2.toString()+" steps. http://www.fragmentation.tk/";
 		}
 		var val1 = document.getElementById("score").rows[0].cells[0].innerHTML;
 		var val2 = document.getElementById("score").rows[0].cells[1].innerHTML;
